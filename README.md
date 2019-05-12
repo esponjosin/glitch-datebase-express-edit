@@ -1,4 +1,4 @@
-Example Quick.db Edit With Express
+Example quick.db edit with express
 =================
 
 **Proyect**, This is a mini project for those users who have a bot with the db quick.db, this will help them if they want to make a dashboard or have a datebase server not linked to the bot project.
