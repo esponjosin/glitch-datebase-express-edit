@@ -83,7 +83,7 @@ router.get('/get', async (req, res) => {
   let table = new db.table(req.query.table)
   
   if(!req.query.id && req.query.id.length > 0) return res.status(404).send({status: 404,
-  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/set`})
+  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/get`})
     
   let data = await table.get(req.query.id)
   
@@ -101,7 +101,7 @@ router.get('/get', async (req, res) => {
   } else {
   
   if(!req.query.id && req.query.id.length > 0) return res.status(404).send({status: 404,
-  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/set`})
+  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/get`})
     
   let data = await db.get(req.query.id)
   
@@ -137,7 +137,7 @@ router.get('/fetch', async (req, res) => {
   let table = new db.table(req.query.table)
   
   if(!req.query.id && req.query.id.length > 0) return res.status(404).send({status: 404,
-  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/set`})
+  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/fetch`})
     
   let data = await table.fetch(req.query.id)
   
@@ -155,7 +155,7 @@ router.get('/fetch', async (req, res) => {
   } else {
   
   if(!req.query.id && req.query.id.length > 0) return res.status(404).send({status: 404,
-  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/set`})
+  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/fetch`})
     
   let data = await db.fetch(req.query.id)
   
@@ -336,10 +336,10 @@ router.get('/add', async (req, res) => {
   let table = new db.table(req.query.table)
     
   if(!req.query.id && req.query.id.length > 0) return res.status(404).send({status: 404,
-  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/set`})
+  error: `No ID was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/add`})
  
   if(!req.query.value && req.query.value.length > 0) return res.status(404).send({status: 404,
-  error: `No Value was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/set`})
+  error: `No Value was entered, for more help: http://${process.env.PROJECT_DOMAIN}.glitch.me/help/add`})
   
   let data = await table.fetch(`${req.query.id}`)
   let data2 = await table.add(`${req.query.id}`, parseInt(req.query.value))
