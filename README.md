@@ -66,7 +66,7 @@ value: 1
 /*
 ```
 
-***All Dates***
+***All Datas***
 
 ```js
 let { body } = await get('proyect-url/all')
