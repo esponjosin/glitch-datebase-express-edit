@@ -11,8 +11,6 @@ Your Project
 
 On the back-end,
 - your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
 
 Example:
 
@@ -26,7 +24,7 @@ value: 'test'
 })
 
 /*
-/ Return the data
+/ Return the new data
 /*
 ```
 
@@ -36,6 +34,10 @@ value: 'test'
 let { body } = await get('proyect-url/get').query({
 id: 'test'
 })
+
+/*
+/ Return the data of id
+/*
 ```
 
 ***Add***
@@ -45,21 +47,33 @@ let { body } = await get('proyect-url/add').query({
 id: 'test',
 value: 1
 })
+
+/*
+/ Return the value toadd, old value and new value
+/*
 ```
 
-***Remove***
+***Subtract***
 
 ```js
 let { body } = await get('proyect-url/subtract').query({
 id: 'test',
 value: 1
 })
+
+/*
+/ Return the value subtract, old value and new value
+/*
 ```
 
 ***All Dates***
 
 ```js
 let { body } = await get('proyect-url/all')
+
+/*
+/ Return array with all ids with the data
+/*
 ```
 
 ***Push***
@@ -69,6 +83,10 @@ let { body } = await get('proyect-url/push').query({
 id: 'test',
 value: 1
 })
+
+/*
+/ Return old value and new value
+/*
 ```
 
 ***Delete***
@@ -77,15 +95,10 @@ value: 1
 let { body } = await get('proyect-url/delete').query({
 id: 'test'
 })
-```
 
-***Add***
-
-```js
-let { body } = await get('proyect-url/add').query({
-id: 'test',
-value: 1
-})
+/*
+/ Return any message for id deleted or is empy
+/*
 ```
 
 
