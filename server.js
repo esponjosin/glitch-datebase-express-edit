@@ -10,10 +10,8 @@ app.set('json spaces', 2);
 // Global Variables
 
 // Routes
-app.use(require('./routes/db'))
-app.use(require('./routes/endpoints'))
-app.use(require('./routes/index'))
-
+app.use(require('./quick-db/db.js'))
+app.use(require('./megadb/db.js'))
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')))
 
